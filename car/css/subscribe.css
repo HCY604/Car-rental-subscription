@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: "Microsoft JhengHei";
+    background: #f4f4f4;
+}
+
+/* step */
+.step {
+    display: none;
+    padding: 30px;
+}
+.step.active {
+    display: block;
+}
+
+/* header */
+.step-header {
+    background: #0067c5;
+    color: white;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+/* filters */
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.filters select {
+    padding: 8px;
+    width: 140px;
+}
+.filters button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+}
+
+/* car list */
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.car-card {
+    width: 260px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.car-card img {
+    width: 100%;
+}
+.car-card button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: red;
+    color: white;
+    border: none;
+}
+
+/* tabs */
+.tabs {
+    display: flex;
+    gap: 10px;
+}
+.tab {
+    padding: 10px 20px;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+}
+.tab.active {
+    background: #0067c5;
+    color: white;
+}
+.tab-content {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* step 3 layout */
+.summary-container {
+    display: flex;
+    gap: 25px;
+}
+.left-box, .right-box {
+    background: #111;
+    color: white;
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+}
+.left-box select, .left-box input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+.car-img {
+    width: 200px;
+    display: block;
+    margin: 10px auto;
+}
+
+/* bottom buttons */
+.step-btns {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.gray-btn {
+    background: #777;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+}
+.red-btn {
+    background: red;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+}

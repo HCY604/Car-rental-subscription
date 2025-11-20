@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>我要訂閱</title>
+    <link rel="stylesheet" href="css/subscribe.css">
+</head>
+
+<body>
+
+<!-- ------------------ STEP 1：選車 ------------------ -->
+<section id="step1" class="step active">
+
+    <div class="step-header">
+        <h2>STEP 1 選擇車款 / 加購配備</h2>
+    </div>
+
+    <div class="filters">
+        <select id="filterBrand"><option value="">品牌</option></select>
+        <select id="filterPrice"><option value="">月費</option></select>
+        <select id="filterArea"><option value="">取車區域</option></select>
+        <select id="filterStore"><option value="">取車據點</option></select>
+        <button id="searchBtn">搜尋</button>
+    </div>
+
+    <h3 class="result-title">搜尋結果</h3>
+    <div id="carList" class="car-list"></div>
+
+</section>
+
+<!-- ------------------ STEP 2：條款  ------------------ -->
+<section id="step2" class="step">
+
+    <div class="step-header">
+        <h2>STEP 2 取車文件與條款</h2>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" data-tab="doc">取車應備文件</button>
+        <button class="tab" data-tab="note">租車注意事項</button>
+        <button class="tab" data-tab="insurance">基礎保險</button>
+        <button class="tab" data-tab="cancel">取消政策</button>
+    </div>
+
+    <div id="tabContent" class="tab-content">
+        <h3>取車應備文件</h3>
+        <p>• 身分證 & 駕照</p>
+        <p>• 信用卡押金 NT$10,000</p>
+    </div>
+
+    <div class="step-btns">
+        <button class="gray-btn" onclick="backToStep1()">返回上一步</button>
+        <button class="red-btn" onclick="goStep3()">繼續下一步</button>
+    </div>
+
+</section>
+
+<!-- ------------------ STEP 3：填寫資料與試算 ------------------ -->
+<section id="step3" class="step">
+
+    <div class="step-header">
+        <h2>STEP 3 填寫資料與試算</h2>
+    </div>
+
+    <div class="summary-container">
+
+        <!-- 左：基本資料 -->
+        <div class="left-box">
+            <h3>內容明細</h3>
+            <img id="s3_carImg" class="car-img">
+
+            <p><b>車型：</b> <span id="s3_carName"></span></p>
+
+            <label>取車據點</label>
+            <select id="s3_store">
+                <option>台北車站</option>
+                <option>羅東車站</option>
+                <option>台中車站</option>
+            </select>
+
+            <label>取車日期</label>
+            <input type="date" id="s3_date">
+
+            <label>取車時間</label>
+            <input type="time" id="s3_time">
+
+            <label>訂閱租期</label>
+            <select id="s3_month">
+                <option value="3">3 個月</option>
+                <option value="6">6 個月</option>
+                <option value="9">9 個月</option>
+                <option value="12">12 個月</option>
+            </select>
+
+            <p><b>里程優惠：</b> <span id="s3_mileageBonus">0</span> 公里/月</p>
+        </div>
+
+        <!-- 右：試算 -->
+        <div class="right-box">
+            <h3>租期共計</h3>
+
+            <p>租期月費：<span id="s3_totalFee"></span></p>
+            <p>保證金：NT$ 10,000</p>
+
+            <h3 style="color:red">總金額：<span id="s3_finalTotal"></span></h3>
+        </div>
+    </div>
+
+    <!-- 底部按鈕 -->
+    <div class="step-btns">
+        <button class="gray-btn" onclick="backToStep2()">返回上一步</button>
+        <button class="red-btn" onclick="confirmOrder()">確認訂閱</button>
+    </div>
+
+</section>
+
+<script src="js/subscribe.js"></script>
+</body>
+</html>
