@@ -35,8 +35,6 @@ CORS 設定（允許前端跨域存取）
 
 2. 系統架構（Project Structure）
 
-以下為反編譯你的 JAR 後，完整抓取的系統架構：
-
 car-subscription-backend/
 │
 ├── config/
@@ -65,7 +63,7 @@ car-subscription-backend/
 │
 └── CarSubscriptionBackendApplication.java  # Spring Boot 入口
 
-3. 資料庫ERD(目前自己測試待串接整合)
+4. 資料庫ERD(目前自己測試待串接整合)
 ┌──────────────┐        ┌──────────────────┐
 │     Car      │ 1    n │   Subscription   │
 ├──────────────┤        ├──────────────────┤
