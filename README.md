@@ -38,20 +38,20 @@ CORS 設定（允許前端跨域存取）
 car-subscription-backend/
 
 config/
-CorsConfig.java                 # CORS 跨域設定
-JwtFilter.java                  # JWT Token 過濾器（可擴充）
+CorsConfig.java  # CORS跨域設定
+JwtFilter.java  # JWT Token過濾器（可擴充）
 
 controller/
-CarController.java              # 車輛查詢 / CRUD
-SubscriptionController.java     # 訂閱建立 / 查詢
+CarController.java  # 車輛查詢/CRUD
+SubscriptionController.java  #訂閱建立/查詢
 
 model/
-Car.java                        # 車輛資料 Entity
-Subscription.java               # 訂閱資料 Entity
-User.java                       # 使用者 Entity（登入用）
+Car.java  # 車輛資料 Entity
+Subscription.java  # 訂閱資料 Entity
+User.java  # 使用者 Entity（登入用）
 
 repository/
-CarRepository.java              # Car JPA Repository
+CarRepository.java  # Car JPA Repository
 SubscriptionRepository.java
 
 service/
@@ -66,25 +66,8 @@ SubscriptionServiceImpl.java
 CarSubscriptionBackendApplication.java   # Spring Boot 啟動入口
 
 
-4. 資料庫ERD(目前自己測試待串接整合)
-┌──────────────┐        ┌──────────────────┐
-│     Car      │ 1    n │   Subscription   │
-├──────────────┤        ├──────────────────┤
-│ id (PK)      │◄──────│ id (PK)           │
-│ brand        │        │ userId            │
-│ model        │        │ carId (FK)        │
-│ price        │        │ startDate         │
-│ status       │        │ endDate           │
-└──────────────┘        └──────────────────┘
+3. 資料庫ERD(目前自己測試待串接整合)
 
-┌──────────────┐
-│     User     │
-├──────────────┤
-│ id (PK)      │
-│ username     │
-│ password     │
-│ role         │
-└──────────────┘
 
 4. API 規格（RESTful API）
 5. 車輛 API（Car）
