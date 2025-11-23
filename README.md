@@ -38,29 +38,29 @@ CORS 設定（允許前端跨域存取）
 car-subscription-backend/
 
 config/
-CorsConfig.java  # CORS跨域設定
-JwtFilter.java  # JWT Token過濾器（可擴充）
+-CorsConfig.java  # CORS跨域設定
+-JwtFilter.java  # JWT Token過濾器（可擴充）
 
 controller/
-CarController.java  # 車輛查詢/CRUD
-SubscriptionController.java  #訂閱建立/查詢
+-CarController.java  # 車輛查詢/CRUD
+-SubscriptionController.java  #訂閱建立/查詢
 
 model/
-Car.java  # 車輛資料 Entity
-Subscription.java  # 訂閱資料 Entity
-User.java  # 使用者 Entity（登入用）
+-Car.java  # 車輛資料 Entity
+-Subscription.java  # 訂閱資料 Entity
+-User.java  # 使用者 Entity（登入用）
 
 repository/
-CarRepository.java  # Car JPA Repository
-SubscriptionRepository.java
+-CarRepository.java  # Car JPA Repository
+-SubscriptionRepository.java
 
 service/
-CarService.java
-SubscriptionService.java
+-CarService.java
+-SubscriptionService.java
 
 impl/
-CarServiceImpl.java
-SubscriptionServiceImpl.java
+-CarServiceImpl.java
+-SubscriptionServiceImpl.java
 
 
 CarSubscriptionBackendApplication.java   # Spring Boot 啟動入口
