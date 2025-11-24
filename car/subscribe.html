@@ -7,6 +7,25 @@
 </head>
 <body>
 
+
+    <div id="loginArea" style="padding:10px; background:#f1f1f1;">
+    <span id="loginStatus">尚未登入</span>
+    <button onclick="showLoginBox()" id="loginBtn">登入</button>
+    <button onclick="logout()" id="logoutBtn" style="display:none;">登出</button>
+</div>
+
+<div id="loginBox" 
+     style="display:none; padding:20px; background:white; width:300px; position:fixed; top:60px; right:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2);">
+    <h3>會員登入</h3>
+    <input id="loginAccount" placeholder="身分證 或 Email" style="width:100%;"><br><br>
+    <input id="loginPassword" type="password" placeholder="密碼" style="width:100%;"><br><br>
+    <button onclick="login()">登入</button>
+    <button onclick="closeLoginBox()">關閉</button>
+</div>
+
+
+
+
 <section id="step1" class="step active">
 
     <h2 class="step-title">STEP 1 選擇車款</h2>
@@ -105,12 +124,12 @@
     <button class="red-btn fixed-next" onclick="confirmOrder()">確認訂閱</button>
 
 
-    <!--  訂單 CRUD 測試  -->
+     <!-- 訂單 CRUD 測試 
     <div id="orderCrudPanel" style="background:white; padding:20px; margin:80px auto; width:90%; border-radius:10px;">
         <h3>訂單 CRUD 測試區</h3>
         <button onclick="loadOrderList()">載入所有訂單</button>
         <div id="orderList" style="margin-top:20px;"></div>
-    </div>
+    </div> -->
 
 </section>
 

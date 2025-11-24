@@ -1,3 +1,48 @@
+/**
+ * 登入
+ */
+function showLoginBox() { loginBox.style.display = "block"; }
+function closeLoginBox() { loginBox.style.display = "none"; }
+
+function login() {
+
+    const acc = loginAccount.value;
+    const pw = loginPassword.value;
+
+    fetch(`http://localhost:8080/login?username=${acc}&password=${pw}`,{
+        method: "POST"
+    })
+    .then(r => r.json())
+    .then(data => {
+
+        localStorage.setItem("token", data.token);
+        localStorage.setItem("member", JSON.stringify(data.member));
+
+        loginStatus.textContent = "歡迎：" + data.member.name;
+        logoutBtn.style.display = "inline-block";
+        loginBtn.style.display = "none";
+
+        alert("登入成功！");
+        closeLoginBox();
+    })
+    .catch(() => alert("登入失敗"));
+}
+
+function logout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("member");
+
+    loginStatus.textContent = "尚未登入";
+    logoutBtn.style.display = "none";
+    loginBtn.style.display = "inline-block";
+
+    alert("已登出");
+}
+
+
+
+
+
 /* ============================================================
    從後端載入車款資料
 ============================================================ */
@@ -222,49 +267,13 @@ function confirmOrder() {
         .then(res => res.json())
         .then(data => {
             alert("訂閱成功！訂單編號：" + data.orderNo);
-            loadOrderList();
+            // loadOrderList();
         })
         .catch(err => alert("訂閱失敗：" + err));
 }
 
 
-/* ============================================================
-   CRUD：載入所有訂單
-============================================================ */
-function loadOrderList() {
-    fetch("http://localhost:8080/api/orders")
-        .then(res => res.json())
-        .then(list => {
 
-            let html = `
-            <table border="1" cellpadding="8" style="width:100%; border-collapse:collapse;">
-                <tr>
-                    <th>ID</th><th>車ID</th><th>取車點</th>
-                    <th>日期</th><th>月數</th><th>金額</th><th>操作</th>
-                </tr>
-            `;
-
-            list.forEach(o => {
-                html += `
-                <tr>
-                    <td>${o.id}</td>
-                    <td>${o.carId}</td>
-                    <td>${o.store}</td>
-                    <td>${o.startDate} ${o.startTime}</td>
-                    <td>${o.months}</td>
-                    <td>${o.finalPrice}</td>
-                    <td>
-                        <button onclick="deleteOrder(${o.id})">刪除</button>
-                        <button onclick="updateOrder(${o.id})">更新</button>
-                    </td>
-                </tr>
-                `;
-            });
-
-            html += "</table>";
-            document.getElementById("orderList").innerHTML = html;
-        });
-}
 
 
 /* ============================================================
@@ -278,13 +287,13 @@ function deleteOrder(id) {
     })
         .then(() => {
             alert("訂單已刪除");
-            loadOrderList();
+            // loadOrderList();
         });
 }
 
 
 /* ============================================================
-   CRUD：更新訂單（示範）
+   CRUD：更新訂單
 ============================================================ */
 function updateOrder(id) {
 
@@ -306,7 +315,7 @@ function updateOrder(id) {
         .then(res => res.json())
         .then(() => {
             alert("訂單已更新！");
-            loadOrderList();
+            // loadOrderList();
         });
 }
 
