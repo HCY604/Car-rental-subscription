@@ -25,9 +25,7 @@
         <button class="carousel-btn left" id="carPrev">❮</button>
 
         <div class="carousel-window">
-            <div id="carouselTrack" class="carousel-track">
-                
-            </div>
+            <div id="carouselTrack" class="carousel-track"></div>
         </div>
 
         <button class="carousel-btn right" id="carNext">❯</button>
@@ -91,7 +89,6 @@
             </select>
 
             <p><b>里程優惠：</b><span id="s3_mileageBonus">0</span> 公里/月</p>
-
         </div>
 
         <div class="right-box">
@@ -107,9 +104,16 @@
     <button class="gray-btn fixed-back" onclick="backToStep2()">返回</button>
     <button class="red-btn fixed-next" onclick="confirmOrder()">確認訂閱</button>
 
+
+    <!--  訂單 CRUD 測試  -->
+    <div id="orderCrudPanel" style="background:white; padding:20px; margin:80px auto; width:90%; border-radius:10px;">
+        <h3>訂單 CRUD 測試區</h3>
+        <button onclick="loadOrderList()">載入所有訂單</button>
+        <div id="orderList" style="margin-top:20px;"></div>
+    </div>
+
 </section>
 
 <script src="js/subscribe.js"></script>
-
 </body>
 </html>
