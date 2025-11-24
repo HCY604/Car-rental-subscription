@@ -16,13 +16,12 @@ public class Subscription {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    // 指向 cars 表
     @Column(name = "car_id")
     private Integer carId;
 
-    // 預留給會員（未來 JWT）
+    // ⚠ 這裡改成 String（會員編號是 m00001）
     @Column(name = "member_id")
-    private Integer memberId;
+    private String memberId;
 
     private String store;
 

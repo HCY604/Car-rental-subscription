@@ -1,10 +1,10 @@
 package com.demo.service.impl;
 
+import org.springframework.stereotype.Service;
+
 import com.demo.model.Subscription;
 import com.demo.repository.SubscriptionRepository;
 import com.demo.service.SubscriptionService;
-
-import org.springframework.stereotype.Service;
 
 @Service
 public class SubscriptionServiceImpl implements SubscriptionService {
