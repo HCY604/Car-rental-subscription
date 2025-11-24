@@ -19,7 +19,7 @@ public class Subscription {
     @Column(name = "car_id")
     private Integer carId;
 
-    // ⚠ 這裡改成 String（會員編號是 m00001）
+    
     @Column(name = "member_id")
     private String memberId;
 
