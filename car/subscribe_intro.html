@@ -5,18 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>訂閱車介紹</title>
 
-    <!-- 正確 CSS -->
+    
     <link rel="stylesheet" href="css/subscribe_intro.css">
+    
 </head>
 <body>
     
-    <header class="header">
-        <h1>訂閱車介紹</h1>
-        <nav>
-            <a href="subscribe_intro.html" class="nav-btn">訂閱車介紹</a>
-            <a href="subscribe.html" class="nav-btn">我要訂閱</a>
-        </nav>
-    </header>
+<header class="header">
+    <h1>訂閱車介紹</h1>
+
+    <nav class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">訂閱車 ▼</button>
+            <div class="dropdown-content">
+                <a href="subscribe_intro.html">訂閱車介紹</a>
+                <a href="subscribe.html">我要訂閱</a>
+                <a href="order.html">訂單查詢</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+</body>
+</html>
+
 
     <section class="why-section">
         <h2>為何要租訂閱車？</h2>
@@ -80,7 +94,7 @@
         </div>
     </section>
 
-    <!-- 正確 JS -->
+    
     <script src="js/subscribe_intro.js"></script>
 
 </body>

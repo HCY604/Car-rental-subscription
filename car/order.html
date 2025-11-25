@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>訂單查詢</title>
+  <link rel="stylesheet" href="css/order.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>訂單查詢</h1>
+    <nav class="navbar">
+      <div class="dropdown">
+        <button class="dropbtn">訂閱車 ▼</button>
+        <div class="dropdown-content">
+          <a href="subscribe_intro.html">訂閱車介紹</a>
+          <a href="subscribe.html">我要訂閱</a>
+          <a href="order.html">訂單查詢</a>
+        </div>
+      </div>
+    </nav>
+    <div id="loginInfo">
+      <span id="memberName"></span>
+      <button id="logoutBtn">登出</button>
+    </div>
+  </header>
+
+  <main>
+    <table id="orderTable">
+      <thead>
+        <tr>
+          <th>訂單編號</th>
+          <th>訂閱人</th>
+          <th>車型</th>
+          <th>開始日期</th>
+          <th>結束日期</th>
+          <th>價錢</th>
+          <th>狀態</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </main>
+
+  <script src="js/order.js"></script>
+</body>
+</html>
