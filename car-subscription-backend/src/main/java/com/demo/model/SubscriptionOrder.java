@@ -21,6 +21,9 @@ public class SubscriptionOrder {
     @Column(name = "car_id", nullable = false)
     private Integer carId;
 
+    @Column(name = "status")
+    private String status;
+    
     private String store;
     private String startDate;
     private String startTime;
